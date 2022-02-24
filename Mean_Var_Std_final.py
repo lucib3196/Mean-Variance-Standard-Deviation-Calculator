@@ -28,42 +28,42 @@ def calculate(list):
     # Append the list to the dictionary
     # Theres probably a faster way to do go through the process but this code works 
 
-
+    # Mean 
     mean1 = matrix.mean(axis=0)
     mean2 = matrix.mean(axis=1)
     mean_flattened = matrix.mean()
     calculate_dic['mean'].append(mean1.tolist())
     calculate_dic['mean'].append(mean2.tolist())
     calculate_dic['mean'].append(mean_flattened.tolist())
-
+    # Varience
     varience1 = matrix.var(axis=0)
     varience2 = matrix.var(axis=1)
     varience_flattened = matrix.var()
     calculate_dic['variance'].append(varience1.tolist())
     calculate_dic['variance'].append(varience2.tolist())
     calculate_dic['variance'].append(varience_flattened.tolist())
-    
+    #Standard Deviation
     std1 = matrix.std(axis=0)
     std2 = matrix.std(axis=1)
     std_flattened = matrix.std()
     calculate_dic['standard deviation'].append(std1.tolist())
     calculate_dic['standard deviation'].append(std2.tolist())
     calculate_dic['standard deviation'].append(std_flattened.tolist())
-
+    # Max
     max1 = matrix.max(axis=0)
     max2 = matrix.max(axis=1)
     max_flattened = matrix.max()
     calculate_dic['max'].append(max1.tolist())
     calculate_dic['max'].append(max2.tolist())
     calculate_dic['max'].append(max_flattened.tolist())
-
+    #Min
     min1 = matrix.min(axis=0)
     min2 = matrix.min(axis=1)
     min_flattened = matrix.min()
     calculate_dic['min'].append(min1.tolist())
     calculate_dic['min'].append(min2.tolist())
     calculate_dic['min'].append(min_flattened.tolist())
-
+    #Sum
     sum1 = matrix.sum(axis=0)
     sum2 = matrix.sum(axis=1)
     sum_flattened = matrix.sum()
@@ -74,5 +74,5 @@ def calculate(list):
 
     return calculate_dic
 
-
+# Test Showing Function
 print(calculate([0,1,3,4,5,6,7,8,9]))
